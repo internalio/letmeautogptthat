@@ -1,0 +1,27 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Default MEDIA_ROOT
+/files
+
+# Code coverage
+.coverage
+
+# Installer logs
+pip-log.txt
+
+# Environments
+.env
+.env.local
+
+# Editor files
+.idea/
+.vscode/
+
+# graphql fragment types
+fragmentTypes.json
+
+# Python venv
+.venv

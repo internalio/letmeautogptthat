@@ -1,0 +1,137 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* :root {
+  font-family: var(--inter-font);
+} */
+
+@layer base {
+  body {
+    @apply bg-neutral-50 text-surface-primary;
+  }
+
+  header {
+    @apply fixed inset-x-0 top-0 flex h-[64px] items-center justify-between self-stretch border-b border-zinc-200 bg-white px-6;
+  }
+
+  h1 {
+    @apply font-semibold;
+  }
+
+  h2 {
+    @apply text-5xl font-semibold leading-snug;
+  }
+
+  h3 {
+    @apply text-xl font-medium;
+  }
+
+  h4 {
+    @apply text-lg font-semibold;
+  }
+
+  p {
+    @apply text-base;
+  }
+
+  hr {
+    @apply text-surface-tertiary;
+  }
+
+  input {
+    @apply focus:border-brand-gradient rounded border border-container-border px-4 py-1.5 text-sm placeholder:text-surface-tertiary hover:border-surface-primary focus:ring-brand focus-visible:outline-brand focus-visible:ring-brand;
+  }
+}
+
+@layer components {
+  .b1 {
+    @apply text-lg font-medium;
+  }
+
+  .link {
+    @apply underline hover:text-brand hover:no-underline;
+  }
+
+  .button {
+    @apply custom-focus hover:border-brand-gradient focus:border-brand-gradient flex items-center justify-center rounded-sm border border-surface-tertiary bg-white px-6 py-2 text-sm font-semibold text-surface-primary transition-all hover:text-black focus:text-brand disabled:cursor-not-allowed disabled:border-surface-tertiary disabled:opacity-50 disabled:hover:border-surface-tertiary disabled:hover:bg-white disabled:hover:text-surface-primary disabled:focus:border-surface-tertiary disabled:focus:bg-white disabled:focus:text-surface-primary disabled:active:bg-white disabled:active:text-surface-primary;
+  }
+
+  button {
+    @apply button;
+  }
+
+  .button-primary {
+    @apply button border-brand-gradient focus:border-brand-gradient hover:bg-brand-gradient focus:bg-brand-gradient active:bg-brand-gradient disabled:border-brand-gradient px-8 py-2 hover:text-white focus:text-white active:text-white;
+  }
+
+  .card-list {
+    @apply flex gap-4;
+  }
+
+  .button-link {
+    @apply no-focus inline border-none bg-transparent p-0 font-normal underline shadow-none hover:border-none hover:no-underline focus:border-none focus:border-none focus:bg-transparent focus:text-brand focus:shadow-none focus:drop-shadow-none focus:filter-none active:border-none active:text-brand active:drop-shadow-none active:filter-none disabled:opacity-40;
+  }
+
+  .button-2 {
+    @apply no-focus border-none bg-transparent p-2 font-bold shadow-none hover:border-none hover:no-underline focus:border-none focus:border-none focus:bg-transparent focus:text-brand focus:shadow-none focus:drop-shadow-none focus:filter-none active:border-none active:text-brand active:drop-shadow-none active:filter-none disabled:opacity-40;
+  }
+
+  .card {
+    @apply box-border rounded-xl border border-surface-tertiary bg-white p-5;
+  }
+
+  .field {
+    @apply box-border flex rounded-sm border border-container-border bg-container-primary p-3;
+  }
+
+  .card-button {
+    @apply hover:border-brand-gradient cursor-pointer transition-all hover:-translate-x-1 hover:-translate-y-1 hover:drop-shadow-xl;
+  }
+
+  .custom-focus {
+    @apply focus:border-brand-gradient focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2;
+  }
+
+  .no-focus {
+    @apply focus:border-none focus:outline-none focus:ring-0;
+  }
+
+  .error {
+    @apply w-full text-center text-red-600;
+  }
+
+  .row {
+    @apply flex flex-row items-center justify-start gap-1;
+  }
+
+  .menu-items {
+    @apply absolute right-0 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none;
+  }
+
+  .cols {
+    @apply flex items-start justify-between gap-5;
+  }
+
+  .wide-col {
+    @apply max-w-xl;
+  }
+}
+
+@layer utilities {
+  .logo-gradient {
+    @apply bg-gradient-to-r from-logo-gradient-start to-logo-gradient-end bg-contain bg-clip-text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+  }
+
+  .border-brand-gradient {
+    background: linear-gradient(white, white) padding-box,
+      linear-gradient(to right, #f8491b, #f12f3f, #dc1860) border-box;
+    border-color: transparent;
+  }
+
+  .bg-brand-gradient {
+    background: linear-gradient(to right, #f8491b, #f12f3f, #dc1860) border-box;
+  }
+}
