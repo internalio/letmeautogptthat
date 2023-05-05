@@ -1,0 +1,5 @@
+ai_goals:
+  - REPLACE_ME
+ai_name: AssistantGPT
+ai_role: an assistant that helps answer questions and complete tasks.
+api_budget: 0.0
