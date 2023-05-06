@@ -392,7 +392,7 @@ if __name__ == "__main__":
         print("job id argument expected")
         sys.exit(1)
 
-    local_env_file = "./.env.local"
+    local_env_file = "./.env"
     if os.path.exists(local_env_file):
         import dotenv
 
